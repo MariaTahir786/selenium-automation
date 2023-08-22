@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2023-08-21T08:13:29 EDT" name="Default suite" finished-at="2023-08-21T08:13:45 EDT" duration-ms="16202">
+    <groups>
+    </groups>
+    <test started-at="2023-08-21T08:13:29 EDT" name="Default test" finished-at="2023-08-21T08:13:45 EDT" duration-ms="16202">
+      <class name="SeleniumDay3.testNgPractice">
+        <test-method signature="testFacebook()[pri:0, instance:SeleniumDay3.testNgPractice@4a883b15]" started-at="2023-08-21T08:13:29 EDT" name="testFacebook" finished-at="2023-08-21T08:13:37 EDT" duration-ms="8104" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testFacebook -->
+        <test-method signature="testGoogle()[pri:0, instance:SeleniumDay3.testNgPractice@4a883b15]" started-at="2023-08-21T08:13:37 EDT" name="testGoogle" finished-at="2023-08-21T08:13:45 EDT" duration-ms="8051" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGoogle -->
+      </class> <!-- SeleniumDay3.testNgPractice -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
