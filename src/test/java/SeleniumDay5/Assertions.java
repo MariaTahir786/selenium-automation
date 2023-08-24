@@ -31,9 +31,9 @@ public class Assertions {
     public void invalidLoginCredentials() throws InterruptedException {
         driver.findElement(By.xpath("(//input[@id='email'])[1]")).sendKeys("mma");
         driver.findElement(By.xpath("//input[@id='pass']")).sendKeys("kjhdhd");
-        Thread.sleep(3000);
-        driver.findElement(By.xpath("//button[@id='u_0_5_Nm' and @name='login']")).click();
-        Thread.sleep(3000);
+       
+        driver.findElement(By.xpath(" (//div[@class='_6ltg'])[1]")).click();
+        Thread.sleep(6000);
         WebElement errorMessage = driver.findElement(By.xpath("//*[@id=\"email_container\"]/div[2]/text()"));
         String expectedErrorMessage = "The email or mobile number you entered isn’t connected to an account. ";
         String actualErrorMessage = errorMessage.getText();
