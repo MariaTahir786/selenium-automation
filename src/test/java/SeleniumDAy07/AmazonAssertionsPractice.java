@@ -34,8 +34,6 @@ public class AmazonAssertionsPractice {
 	}
 	@After
 	public void tearDown() {
-
-
 		driver.close();
 	}
 	
@@ -47,13 +45,13 @@ public class AmazonAssertionsPractice {
 		        
 		        // Soft assertions with multiple checks
 		        String actualTitle = driver.getTitle();
-		        String expectedTitle = "Amazon.com. Spend less. Smile more.";
+		        String expectedTitle = "Amazon.com. Spend less. Smile more111111.";
 		        softAssertions.assertThat(actualTitle).isEqualTo(expectedTitle);
 
 		        String actualUrl = driver.getCurrentUrl();
-		        String expectedUrl = "https://www.amazon.com/";
+		        String expectedUrl = "https://www.amazon.com/111111";
 		        softAssertions.assertThat(actualUrl).isEqualTo(expectedUrl);
-
+		        System.out.println("Assertion Failed");
 		        String actualHeadingChooseLocation = driver.findElement(By.xpath("//body//div//header//span//a//span[2]")).getText();
 		        String expectedHeading = "\r\n"
 		        		+ "                   Choose location for most accurate options\r\n"
@@ -64,7 +62,7 @@ public class AmazonAssertionsPractice {
 		        int actualLinkCount = driver.findElements(By.tagName("a")).size();
 		        int expectedLinkCount = 518;
 		        softAssertions.assertThat(actualLinkCount).isEqualTo(expectedLinkCount);
-
+		        softAssertions.assertThat(actualLinkCount).isEqualTo(expectedLinkCount);
 		        boolean isLogoDisplayed = driver.findElement(By.xpath("//a[@aria-label='Amazon']")).isDisplayed();
 		        softAssertions.assertThat(isLogoDisplayed).isTrue();
 
