@@ -15,7 +15,10 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class DynamicDisapperingDropDowns {
 
-
+ // dynamic disappeeraing drop down will be captured via souce tab by 
+	//pausing execution or via selectors hub debugging button which will pause the execution 
+	//after 5 seconds(during that 5 seconds quickly opn the disappearing drop down) and we
+	//can inspect the disapperaing element
 	WebDriver driver;
 	
 

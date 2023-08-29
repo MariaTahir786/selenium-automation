@@ -1,16 +1,5 @@
 
 
-
-
-
-
-
-
-
-
-
-
-
 package SeleniumDay02;
 
 import java.util.concurrent.TimeUnit;
