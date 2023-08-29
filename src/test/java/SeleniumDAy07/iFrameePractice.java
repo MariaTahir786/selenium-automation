@@ -1,5 +1,6 @@
 package SeleniumDAy07;
 
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 import org.junit.After;
@@ -13,6 +14,9 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class iFrameePractice {
+	
+	//for this one  ms. Maria create seleneium dev class example
+	
 
 	WebDriver driver;
 	@Before
@@ -39,8 +43,14 @@ public class iFrameePractice {
 		 @Test
 		 public void iframetesting() {
 			 
+			 //to get totoal no of iframes 
+			 List<WebElement> iframeElements = driver.findElements(By.tagName("iframe"));
+			 System.out.println("Total number of iframes are " + iframeElements.size());
+			 
+			 
+			 
 			 // Switch to iframe using index
-		        driver.switchTo().frame(0); // Assuming the first iframe on the page
+		        driver.switchTo().frame(3); // Assuming the first iframe on the page
 
 		        // Now you can interact with elements inside the iframe
 		        WebElement searchBox = driver.findElement(By.name("searchboxinput"));
