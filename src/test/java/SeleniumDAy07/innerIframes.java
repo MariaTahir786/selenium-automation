@@ -38,7 +38,7 @@ public class innerIframes {
 		
 		
 		 @Test
-		 public void inneriframetesting() {
+		 public void inneriframetesting() throws InterruptedException {
 			 //click button
 			 driver.findElement(By.xpath("//a[normalize-space()='Iframe with in an Iframe']")).click();
 			 //switch to outer frame
@@ -49,7 +49,11 @@ public class innerIframes {
 			 driver.switchTo().frame(innerFrame);
 			 //get element and send kesys
 			 driver.findElement(By.xpath("//input[@type='text']")).sendKeys("Welcome to my class");
-			 
+			 Thread.sleep(3000);
+			 driver.switchTo().parentFrame();
+			 WebElement textTitle=driver.findElement(By.xpath("//h5[normalize-space()='Nested iFrames']"));
+			 String text=textTitle.getText();
+			 System.out.println(text);
 		 }
 		 }
 	

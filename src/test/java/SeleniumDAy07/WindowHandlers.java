@@ -37,7 +37,8 @@ public class WindowHandlers {
     driver.close();
     driver.quit();
     }
-    
+    @Ignore
+
     @Test
     public void windowNewTab() throws InterruptedException {
         //clicks on NewTab blue button
@@ -57,6 +58,7 @@ public class WindowHandlers {
         
         Thread.sleep(3000);
         System.out.println("NewTab -- https://demoqa.com/sample = " + driver.getCurrentUrl());
+        
     }
     @Ignore
      @Test
@@ -73,7 +75,6 @@ String newWindowTab=it.next();
  System.out.println("newWindow"+driver.getCurrentUrl());
     	 
      }
-    @Ignore
    @Test
    public void windowMessage() {
   	 driver.findElement(By.xpath("//button[@id='messageWindowButton']")).click();
@@ -83,7 +84,7 @@ String newWindowTab=it.next();
   	 String newWindowmeesg=iter.next();
   	 driver.switchTo().window(newWindowmeesg);
   	 System.out.println("newWindowMessage"+driver.getCurrentUrl());
-
+driver.close();
    }
 	
 }
