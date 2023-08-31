@@ -65,24 +65,25 @@ public class windowHandlers {
 		Set<String> handlesIds = driver.getWindowHandles();
 		for (String handle : handlesIds) {
 			System.out.println(handle);
-			 //if we want to send text in child window we have to switch to child window
-			//so put a condition if its not a parent then switch it
-			if(!handle.equals(parentHandle)) {
+			// if we want to send text in child window we have to switch to child window
+			// so put a condition if its not a parent then switch it
+			if (!handle.equals(parentHandle)) {
 				driver.switchTo().window(handle);
-				
+
 				// find that element in child window and send keys
 				driver.findElement(By.id("firstName")).sendKeys("Mariaaa");
-				
-				//then we will close the current window by close(only focussed ) ...quit will close all 
+
+				// then we will close the current window by close(only focussed ) ...quit will
+				// close all
 				Thread.sleep(3000);
 				driver.close();
 			}
 		}
-			driver.switchTo().window(parentHandle);
-		//now we have to send text in parent window so locate  and send keys
-		WebElement textbox=driver.findElement(By.id("name"));
+		driver.switchTo().window(parentHandle);
+		// now we have to send text in parent window so locate and send keys
+		WebElement textbox = driver.findElement(By.id("name"));
 		// Scroll the button into view
-				((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", textbox);
+		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", textbox);
 		textbox.sendKeys("Tahir");
 		Thread.sleep(2000);
 	}
